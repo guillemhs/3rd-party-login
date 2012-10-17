@@ -1,0 +1,239 @@
+  [1m[36mSQL (49.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (543.4ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime, `twitter_confirmation_token` varchar(255), `linkedin_confirmation_token` varchar(255), `twitter_uid` varchar(255), `linkedin_uid` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (2.5ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (278.0ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (299.9ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (1.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (195.0ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (384.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (86.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120516115037')[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (35.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20120516115037)
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (80.6ms)[0m  DROP DATABASE IF EXISTS `devise_omniauth_test`
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE DATABASE `devise_omniauth_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35mSQL (3.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (183.2ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `created_at` datetime, `updated_at` datetime, `twitter_confirmation_token` varchar(255), `linkedin_confirmation_token` varchar(255), `twitter_uid` varchar(255), `linkedin_uid` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (235.7ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (332.1ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (130.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (30.2ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (167.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (117.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120516115037')
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/guillem/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 17 20:43:01 +0200 2012
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Wed Oct 17 20:43:07 +0200 2012
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (13.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (289.0ms)
+Completed 200 OK in 421ms (Views: 321.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Wed Oct 17 20:43:55 +0200 2012
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at Wed Oct 17 20:44:05 +0200 2012
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=pJY6h7cfLYivzYVZ8x11XN2nykY2Y3R7vNvPoVGA&oauth_verifier=lIaFWVhhvj6FU6wpCvS5UKp2J004xuOeaHpLN5tI" for 127.0.0.1 at Wed Oct 17 20:44:11 +0200 2012
+  Processing by Users::OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"pJY6h7cfLYivzYVZ8x11XN2nykY2Y3R7vNvPoVGA", "oauth_verifier"=>"lIaFWVhhvj6FU6wpCvS5UKp2J004xuOeaHpLN5tI"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (84.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`twitter_uid` = 26980978 LIMIT 1
+Redirected to http://0.0.0.0:3000/fetch_email_from_twitter/26980978
+Completed 302 Found in 490ms
+
+
+Started GET "/fetch_email_from_twitter/26980978" for 127.0.0.1 at Wed Oct 17 20:44:14 +0200 2012
+  Processing by Users::FetchEmailController#fetch_email_from_twitter as HTML
+  Parameters: {"twitter_uid"=>"26980978"}
+Rendered users/fetch_email/fetch_email_from_twitter.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 167ms (Views: 45.5ms | ActiveRecord: 85.2ms)
+
+
+Started POST "/fetch_email_from_twitter_and_create" for 127.0.0.1 at Wed Oct 17 20:44:28 +0200 2012
+  Processing by Users::FetchEmailController#fetch_email_from_twitter_and_create as HTML
+  Parameters: {"user"=>{"twitter_uid"=>"26980978", "email"=>"guillem.hernandez.sola@gmail.com"}, "utf8"=>"✓", "commit"=>"Sign up", "authenticity_token"=>"1AaG7TjpxOlmdnbBER46PzBd+bOoZdKmGajgNnDSpVk="}
+  [1m[36mUser Load (37.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'guillem.hernandez.sola@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (89.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'guillem.hernandez.sola@gmail.com') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'Thc6y36cPuxeFcEfDMhg' LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (20.1ms)[0m  INSERT INTO `users` (`reset_password_sent_at`, `last_sign_in_ip`, `linkedin_uid`, `encrypted_password`, `sign_in_count`, `confirmation_sent_at`, `email`, `twitter_uid`, `twitter_confirmation_token`, `last_sign_in_at`, `current_sign_in_ip`, `updated_at`, `remember_created_at`, `created_at`, `reset_password_token`, `current_sign_in_at`, `linkedin_confirmation_token`, `confirmation_token`, `confirmed_at`) VALUES (NULL, NULL, NULL, '$2a$10$TH3LoBH5ft6qeA/WGZe8R.l7cyv0h42BYO.1aVktm4xNPLy8ATK9S', 0, '2012-10-17 18:44:29', 'guillem.hernandez.sola@gmail.com', '26980978', NULL, NULL, NULL, '2012-10-17 18:44:29', NULL, '2012-10-17 18:44:29', NULL, NULL, NULL, 'Thc6y36cPuxeFcEfDMhg', NULL)
+Rendered devise/mailer/confirmation_instructions.html.erb (2.6ms)
+
+Sent mail to guillem.hernandez.sola@gmail.com (1120ms)
+Date: Wed, 17 Oct 2012 20:44:31 +0200
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: guillem.hernandez.sola@gmail.com
+Message-ID: <507efc8fc7862_158924d9075837556@mini-inspiron-1018.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome guillem.hernandez.sola@gmail.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=Thc6y36cPuxeFcEfDMhg">Confirm my account</a></p>
+  [1m[36mSQL (58.3ms)[0m  [1mCOMMIT[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (2.7ms)
+
+Sent mail to guillem.hernandez.sola@gmail.com (138ms)
+Date: Wed, 17 Oct 2012 20:44:33 +0200
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: guillem.hernandez.sola@gmail.com
+Message-ID: <507efc91c66e_158924d9075837620@mini-inspiron-1018.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome guillem.hernandez.sola@gmail.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=Thc6y36cPuxeFcEfDMhg">Confirm my account</a></p>
+Redirected to http://0.0.0.0:3000/fetch_email_from_twitter/26980978
+Completed 302 Found in 4645ms
+
+
+Started GET "/fetch_email_from_twitter/26980978" for 127.0.0.1 at Wed Oct 17 20:44:33 +0200 2012
+  Processing by Users::FetchEmailController#fetch_email_from_twitter as HTML
+  Parameters: {"twitter_uid"=>"26980978"}
+Rendered users/fetch_email/fetch_email_from_twitter.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 365ms (Views: 52.0ms | ActiveRecord: 208.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Oct 17 20:45:15 +0200 2012
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (19.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 210ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/linkedin" for 127.0.0.1 at Wed Oct 17 20:45:18 +0200 2012
+
+
+Started GET "/users/auth/linkedin/callback?oauth_token=61a888dc-b7c7-4406-bf90-5491fb7a01ef&oauth_verifier=67787" for 127.0.0.1 at Wed Oct 17 20:45:44 +0200 2012
+  Processing by Users::OmniauthCallbacksController#linkedin as HTML
+  Parameters: {"oauth_token"=>"61a888dc-b7c7-4406-bf90-5491fb7a01ef", "oauth_verifier"=>"67787"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`linkedin_uid` = 'uYyKKwyiVr' LIMIT 1
+Redirected to http://0.0.0.0:3000/fetch_email_from_linkedin/uYyKKwyiVr
+Completed 302 Found in 79ms
+
+
+Started GET "/fetch_email_from_linkedin/uYyKKwyiVr" for 127.0.0.1 at Wed Oct 17 20:45:47 +0200 2012
+  Processing by Users::FetchEmailController#fetch_email_from_linkedin as HTML
+  Parameters: {"linkedin_uid"=>"uYyKKwyiVr"}
+Rendered users/fetch_email/fetch_email_from_linkedin.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 243ms (Views: 115.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Oct 17 20:45:58 +0200 2012
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (10.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (104.9ms)
+Completed 200 OK in 201ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/google" for 127.0.0.1 at Wed Oct 17 20:46:01 +0200 2012
+
+
+Started GET "/users/auth/google/callback?_method=post&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2012-10-17T18%3A46%3A14Z-j6-JvwwabK9Rg&openid.return_to=http%3A%2F%2F0.0.0.0%3A3000%2Fusers%2Fauth%2Fgoogle%2Fcallback%3F_method%3Dpost&openid.assoc_handle=AMlYA9XM1j6DnT5dL1nR5ehJhMz5ZYuE5G3UODVCvHZN4oeU6Cwf-wum&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.ext5%2Cext1.value.ext5%2Cext1.type.ext2%2Cext1.value.ext2%2Cext1.type.ext4%2Cext1.value.ext4&openid.sig=JplbVyKR6%2BDq1lqAZMYtqgL7hF4%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawntZ_OxXq1iFnDczT5v6wSbyYmMkCiE1-s&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawntZ_OxXq1iFnDczT5v6wSbyYmMkCiE1-s&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.ext5=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.ext5=Guillem&openid.ext1.type.ext2=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.ext2=guillem.hernandez.sola%40gmail.com&openid.ext1.type.ext4=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.ext4=Hernandez+Sola" for 127.0.0.1 at Wed Oct 17 20:46:14 +0200 2012
+  Processing by Users::OmniauthCallbacksController#google as HTML
+  [1m[36mUser Load (6.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'guillem.hernandez.sola@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (27.7ms)[0m  [1mUPDATE `users` SET `updated_at` = '2012-10-17 18:46:15', `confirmed_at` = '2012-10-17 18:46:15', `confirmation_token` = NULL WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (73.3ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.7ms)[0m  UPDATE `users` SET `last_sign_in_ip` = '127.0.0.1', `updated_at` = '2012-10-17 18:46:15', `sign_in_count` = 1, `current_sign_in_ip` = '127.0.0.1', `current_sign_in_at` = '2012-10-17 18:46:15', `last_sign_in_at` = '2012-10-17 18:46:15' WHERE `users`.`id` = 1
+  [1m[36mSQL (38.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 283ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 17 20:46:15 +0200 2012
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (149.1ms)
+Completed 200 OK in 171ms (Views: 168.5ms | ActiveRecord: 147.7ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Oct 17 20:46:46 +0200 2012
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/registrations/edit.html.erb within layouts/application (234.9ms)
+Completed 200 OK in 455ms (Views: 325.8ms | ActiveRecord: 0.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/guillem/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Oct 17 20:52:30 +0200 2012
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered devise/registrations/edit.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 465ms (Views: 119.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 17 20:52:34 +0200 2012
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (133.2ms)
+Completed 200 OK in 150ms (Views: 148.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/logout" for 127.0.0.1 at Wed Oct 17 20:52:37 +0200 2012
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1AaG7TjpxOlmdnbBER46PzBd+bOoZdKmGajgNnDSpVk="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 161ms
+
+
+Started GET "/login" for 127.0.0.1 at Wed Oct 17 20:52:37 +0200 2012
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (8.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 182ms (Views: 83.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Wed Oct 17 20:52:40 +0200 2012
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at Wed Oct 17 20:54:27 +0200 2012
